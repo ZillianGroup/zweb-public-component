@@ -1,5 +1,5 @@
-import { getCurrentTeamInfo, getPlanUtils } from "@illa-public/user-data"
-import { canManagePayment } from "@illa-public/user-role-utils"
+import { getCurrentTeamInfo, getPlanUtils } from "@zweb-public/user-data"
+import { canManagePayment } from "@zweb-public/user-role-utils"
 import { FC, Fragment, useCallback, useEffect, useMemo, useState } from "react"
 import { useSelector } from "react-redux"
 import { InsufficientNoticeModal } from "../../component/InsufficientNoticeModal"

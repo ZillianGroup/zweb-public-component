@@ -1,15 +1,15 @@
 import { debounce } from "lodash"
 import { forwardRef, useMemo } from "react"
-import { ILLACodeMirrorCore } from "./CodeMirror/core"
+import { ZWEBCodeMirrorCore } from "./CodeMirror/core"
 import { IExpressionShape } from "./CodeMirror/extensions/interface"
-import { illaCodeMirrorTooltipStyle } from "./CodeMirror/theme"
+import { zwebCodeMirrorTooltipStyle } from "./CodeMirror/theme"
 import {
   fixedValue,
   getStringSnippets,
   isDynamicStringSnippet,
 } from "./CodeMirror/utils"
 import { CodeEditorProps } from "./interface"
-import { ILLACodeMirrorWrapperStyle } from "./style"
+import { ZWEBCodeMirrorWrapperStyle } from "./style"
 
 export const CodeEditor = forwardRef<HTMLDivElement, CodeEditorProps>(
   (props) => {
@@ -58,12 +58,12 @@ export const CodeEditor = forwardRef<HTMLDivElement, CodeEditorProps>(
     return (
       <div
         css={[
-          ILLACodeMirrorWrapperStyle,
+          ZWEBCodeMirrorWrapperStyle,
           wrapperCss,
-          illaCodeMirrorTooltipStyle,
+          zwebCodeMirrorTooltipStyle,
         ]}
       >
-        <ILLACodeMirrorCore
+        <ZWEBCodeMirrorCore
           className={className}
           placeholder={placeholder}
           value={fixedValue(value)}

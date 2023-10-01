@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { CloseIcon, Drawer, TriggerProvider } from "@illa-design/react"
+import { CloseIcon, Drawer, TriggerProvider } from "@zweb-design/react"
 import { AppPublicMobile } from "../../component/AppPublic/mobile"
 import { MarketShareAppProps } from "../interface"
 import {

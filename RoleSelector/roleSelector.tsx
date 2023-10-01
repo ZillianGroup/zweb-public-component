@@ -1,5 +1,5 @@
-import { USER_ROLE } from "@illa-public/user-data"
-import { isBiggerThanTargetRole } from "@illa-public/user-role-utils"
+import { USER_ROLE } from "@zweb-public/user-data"
+import { isBiggerThanTargetRole } from "@zweb-public/user-role-utils"
 import { FC, useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 import {
@@ -12,7 +12,7 @@ import {
   Trigger,
   TriggerProvider,
   UpIcon,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { RoleSelectorProps } from "./interface"
 import {
   applyRoleOuterLabelStyle,

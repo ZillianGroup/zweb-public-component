@@ -1,16 +1,16 @@
-import { GithubIcon } from "@illa-public/icon"
+import { GithubIcon } from "@zweb-public/icon"
 import {
-  ILLAMixpanel,
-  ILLA_MIXPANEL_EVENT_TYPE,
-  ILLA_MIXPANEL_PUBLIC_PAGE_NAME,
-} from "@illa-public/mixpanel-utils"
-import { TextLink } from "@illa-public/text-link"
-import { isCloudVersion } from "@illa-public/utils"
+  ZWEBMixpanel,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+  ZWEB_MIXPANEL_PUBLIC_PAGE_NAME,
+} from "@zweb-public/mixpanel-utils"
+import { TextLink } from "@zweb-public/text-link"
+import { isCloudVersion } from "@zweb-public/utils"
 import { FC, useEffect, useState } from "react"
 import { Controller, useFormContext } from "react-hook-form"
 import { Trans, useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
-import { Button, Input, Password } from "@illa-design/react"
+import { Button, Input, Password } from "@zweb-design/react"
 import { EmailCode } from "../../components/EmailCode"
 import { OAuthButton } from "../../components/OAuthButton"
 import { EMAIL_FORMAT } from "../../constants/regExp"
@@ -50,14 +50,14 @@ export const MobileRegister: FC<RegisterProps> = (props) => {
   >()
 
   const validReport = async () => {
-    ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
-      page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+    ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
+      page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
       element: "create_account",
     })
     let isValid = await trigger()
     if (isValid) {
       validateReport(
-        ILLA_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+        ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
         "create_account",
         true,
         {},
@@ -69,7 +69,7 @@ export const MobileRegister: FC<RegisterProps> = (props) => {
   useEffect(() => {
     if (asyncValid && !asyncValid.isValid) {
       validateReport(
-        ILLA_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+        ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
         "create_account",
         false,
         errors,
@@ -89,8 +89,8 @@ export const MobileRegister: FC<RegisterProps> = (props) => {
               <TextLink
                 key="go-to-login"
                 onClick={() => {
-                  ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
-                    page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                  ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
+                    page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                     element: "sign_in",
                   })
                   navigate({ pathname: "/login", search: location.search })
@@ -115,15 +115,15 @@ export const MobileRegister: FC<RegisterProps> = (props) => {
               variant="fill"
               placeholder={t("page.user.sign_up.fields.username")}
               onFocus={() => {
-                ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.FOCUS, {
-                  page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.FOCUS, {
+                  page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                   element: "username_input",
                   parameter3: getValues().nickname?.length ?? 0,
                 })
               }}
               onBlur={() => {
-                ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
-                  page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
+                  page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                   element: "username_input",
                   parameter3: getValues().nickname?.length ?? 0,
                 })
@@ -162,15 +162,15 @@ export const MobileRegister: FC<RegisterProps> = (props) => {
               placeholder={t("page.user.sign_up.fields.email")}
               {...(lockedEmail && { value: lockedEmail, disabled: true })}
               onFocus={() => {
-                ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.FOCUS, {
-                  page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.FOCUS, {
+                  page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                   element: "email_input",
                   parameter3: getValues().email?.length ?? 0,
                 })
               }}
               onBlur={() => {
-                ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
-                  page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
+                  page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                   element: "email_input",
                   parameter3: getValues().email?.length ?? 0,
                 })
@@ -221,15 +221,15 @@ export const MobileRegister: FC<RegisterProps> = (props) => {
                 }
                 placeholder={t("page.user.sign_up.fields.verification_code")}
                 onFocus={() => {
-                  ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.FOCUS, {
-                    page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                  ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.FOCUS, {
+                    page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                     element: "verification_code_input",
                     parameter3: getValues().verificationCode?.length ?? 0,
                   })
                 }}
                 onBlur={() => {
-                  ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
-                    page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                  ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
+                    page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                     element: "verification_code_input",
                     parameter3: getValues().verificationCode?.length ?? 0,
                   })
@@ -265,15 +265,15 @@ export const MobileRegister: FC<RegisterProps> = (props) => {
               variant="fill"
               placeholder={t("page.user.sign_up.fields.password")}
               onFocus={() => {
-                ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.FOCUS, {
-                  page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.FOCUS, {
+                  page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                   element: "password",
                   parameter3: getValues().password?.length ?? 0,
                 })
               }}
               onBlur={() => {
-                ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
-                  page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
+                  page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                   element: "password",
                   parameter3: getValues().password?.length ?? 0,
                 })

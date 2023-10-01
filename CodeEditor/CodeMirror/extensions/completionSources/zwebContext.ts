@@ -65,7 +65,7 @@ export function getDataInfo(data: Record<string, unknown>, path: string) {
   }
 }
 
-export const buildIllaContextCompletionSource = (
+export const buildZWebContextCompletionSource = (
   completeOptions: { key: string; value: any }[],
 ): ((
   context: CompletionContext,

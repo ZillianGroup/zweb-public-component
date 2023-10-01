@@ -1,8 +1,8 @@
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
-  ILLA_MIXPANEL_PUBLIC_PAGE_NAME,
-} from "@illa-public/mixpanel-utils"
-import { ILLAMixpanel } from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_EVENT_TYPE,
+  ZWEB_MIXPANEL_PUBLIC_PAGE_NAME,
+} from "@zweb-public/mixpanel-utils"
+import { ZWEBMixpanel } from "@zweb-public/mixpanel-utils"
 import { FC, useEffect, useState } from "react"
 import { Controller, useFormContext } from "react-hook-form"
 import { useTranslation } from "react-i18next"
@@ -13,7 +13,7 @@ import {
   Password,
   PreviousIcon,
   WarningCircleIcon,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { EmailCode } from "../../components/EmailCode"
 import { EMAIL_FORMAT } from "../../constants/regExp"
 import { validateReport } from "../../utils/reportUtils"
@@ -58,14 +58,14 @@ export const PCReset: FC<ResetProps> = (props) => {
   >()
 
   const validReport = async () => {
-    ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
-      page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+    ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
+      page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
       element: "reset_password",
     })
     let isValid = await trigger()
     if (isValid) {
       validateReport(
-        ILLA_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+        ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
         "reset_password",
         true,
         {},
@@ -77,7 +77,7 @@ export const PCReset: FC<ResetProps> = (props) => {
   useEffect(() => {
     if (asyncValid && !asyncValid.isValid) {
       validateReport(
-        ILLA_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+        ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
         "reset_password",
         false,
         errors,
@@ -123,16 +123,16 @@ export const PCReset: FC<ResetProps> = (props) => {
                   placeholder={t("page.user.forgot_password.placeholder.email")}
                   {...(lockedEmail && { value: lockedEmail, disabled: true })}
                   onFocus={() => {
-                    ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.FOCUS, {
-                      page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+                    ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.FOCUS, {
+                      page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
 
                       element: "username_input",
                       parameter3: getValues().email?.length ?? 0,
                     })
                   }}
                   onBlur={() => {
-                    ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
-                      page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+                    ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
+                      page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
 
                       element: "username_input",
                       parameter3: getValues().email?.length ?? 0,
@@ -189,16 +189,16 @@ export const PCReset: FC<ResetProps> = (props) => {
                     />
                   }
                   onFocus={() => {
-                    ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.FOCUS, {
-                      page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+                    ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.FOCUS, {
+                      page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
 
                       element: "verification_code_input",
                       parameter3: getValues().verificationCode?.length ?? 0,
                     })
                   }}
                   onBlur={() => {
-                    ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
-                      page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+                    ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
+                      page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
 
                       element: "verification_code_input",
                       parameter3: getValues().verificationCode?.length ?? 0,
@@ -243,15 +243,15 @@ export const PCReset: FC<ResetProps> = (props) => {
                   variant="fill"
                   placeholder={t("page.user.password.placeholder")}
                   onFocus={() => {
-                    ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.FOCUS, {
-                      page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+                    ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.FOCUS, {
+                      page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
                       element: "password_input",
                       parameter3: getValues().newPassword?.length ?? 0,
                     })
                   }}
                   onBlur={() => {
-                    ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
-                      page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+                    ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
+                      page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
 
                       element: "password_input",
                       parameter3: getValues().newPassword?.length ?? 0,

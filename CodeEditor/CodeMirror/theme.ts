@@ -1,11 +1,11 @@
 import { css } from "@emotion/react"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 import {
   defaultHighlightClassName,
   errorHighlightClassName,
 } from "./extensions/heighLightJSExpression"
 
-export const ILLACodeMirrorTheme = {
+export const ZWEBCodeMirrorTheme = {
   "&.cm-editor": {
     borderRadius: "8px",
     border: `1px solid ${getColor("grayBlue", "03")}`,
@@ -46,7 +46,7 @@ export const ILLACodeMirrorTheme = {
   },
 }
 
-export const illaCodeMirrorTooltipStyle = css`
+export const zwebCodeMirrorTooltipStyle = css`
   .cm-tooltip {
     &.cm-tooltip-autocomplete {
       border: none;

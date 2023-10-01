@@ -1,5 +1,5 @@
 {
-  "name": "@illa-public/user-data",
+  "name": "@zweb-public/user-data",
   "version": "0.0.0",
   "private": true,
   "main": "index.ts",

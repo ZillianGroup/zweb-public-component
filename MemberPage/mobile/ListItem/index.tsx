@@ -1,11 +1,11 @@
-import { Avatar } from "@illa-public/avatar"
-import { ERROR_FLAG, isILLAAPiError } from "@illa-public/illa-net"
-import { RoleSelector } from "@illa-public/role-selector"
-import { USER_ROLE, USER_STATUS, teamActions } from "@illa-public/user-data"
+import { Avatar } from "@zweb-public/avatar"
+import { ERROR_FLAG, isZWEBAPiError } from "@zweb-public/zweb-net"
+import { RoleSelector } from "@zweb-public/role-selector"
+import { USER_ROLE, USER_STATUS, teamActions } from "@zweb-public/user-data"
 import { FC, useCallback } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch } from "react-redux"
-import { useMessage } from "@illa-design/react"
+import { useMessage } from "@zweb-design/react"
 import { fetchChangeTeamMemberRole } from "../../service"
 import { ListItemProps } from "./interface"
 import {
@@ -51,7 +51,7 @@ export const MobileMemberListItem: FC<ListItemProps> = (props) => {
           content: t("user_management.mes.change_role_suc"),
         })
       } catch (error) {
-        if (isILLAAPiError(error)) {
+        if (isZWEBAPiError(error)) {
           switch (error.data.errorFlag) {
             case ERROR_FLAG.ERROR_FLAG_ACCESS_DENIED:
             case ERROR_FLAG.ERROR_FLAG_CAN_NOT_INCREASE_TEAM_MEMBER_DUE_TO_NO_BALANCE:

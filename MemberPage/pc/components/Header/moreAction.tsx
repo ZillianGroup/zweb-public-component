@@ -1,15 +1,15 @@
-import { AuthShown, SHOW_RULES } from "@illa-public/auth-shown"
-import { ERROR_FLAG, isILLAAPiError } from "@illa-public/illa-net"
+import { AuthShown, SHOW_RULES } from "@zweb-public/auth-shown"
+import { ERROR_FLAG, isZWEBAPiError } from "@zweb-public/zweb-net"
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
+  ZWEB_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
+} from "@zweb-public/mixpanel-utils"
 import {
   USER_ROLE,
   getCurrentTeamInfo,
   teamActions,
-} from "@illa-public/user-data"
-import { isCloudVersion } from "@illa-public/utils"
+} from "@zweb-public/user-data"
+import { isCloudVersion } from "@zweb-public/utils"
 import { FC, MouseEvent, useCallback, useContext, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
@@ -22,7 +22,7 @@ import {
   Switch,
   useMessage,
   useModal,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import {
   fetchRemoveTeamMember,
   fetchUpdateTeamPermissionConfig,
@@ -59,7 +59,7 @@ export const MoreAction: FC<IPcMoreActionProps> = (props) => {
 
   const handleClickDeleteOrLeaveTeam = useCallback(() => {
     track?.(
-      ILLA_MIXPANEL_EVENT_TYPE.CLICK,
+      ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "leave",
       },
@@ -76,7 +76,7 @@ export const MoreAction: FC<IPcMoreActionProps> = (props) => {
       },
       afterOpen: () => {
         track?.(
-          ILLA_MIXPANEL_EVENT_TYPE.SHOW,
+          ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
           {
             element: "leave_modal",
           },
@@ -85,7 +85,7 @@ export const MoreAction: FC<IPcMoreActionProps> = (props) => {
       },
       onOk: async () => {
         track?.(
-          ILLA_MIXPANEL_EVENT_TYPE.CLICK,
+          ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
           {
             element: "leave_modal_leave",
           },
@@ -97,7 +97,7 @@ export const MoreAction: FC<IPcMoreActionProps> = (props) => {
             content: t("team_setting.mes.leave_suc"),
           })
           track?.(
-            ILLA_MIXPANEL_EVENT_TYPE.REQUEST,
+            ZWEB_MIXPANEL_EVENT_TYPE.REQUEST,
             {
               element: "delete",
               parameter1: "delete_select",
@@ -106,7 +106,7 @@ export const MoreAction: FC<IPcMoreActionProps> = (props) => {
           )
           afterLeaveTeam?.()
         } catch (e) {
-          if (isILLAAPiError(e)) {
+          if (isZWEBAPiError(e)) {
             switch (e.data.errorFlag) {
               case ERROR_FLAG.ERROR_FLAG_CAN_NOT_REMOVE_TEAM_MEMBER_BECAUSE_APPSUMO_BUYER:
                 message.error({
@@ -127,7 +127,7 @@ export const MoreAction: FC<IPcMoreActionProps> = (props) => {
       },
       onCancel: () => {
         track?.(
-          ILLA_MIXPANEL_EVENT_TYPE.CLICK,
+          ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
           {
             element: "leave_modal_cancel",
           },
@@ -147,7 +147,7 @@ export const MoreAction: FC<IPcMoreActionProps> = (props) => {
 
   const handleChangeInviteByEditor = async (value: boolean) => {
     track?.(
-      ILLA_MIXPANEL_EVENT_TYPE.CLICK,
+      ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "allow_manage",
         parameter2: value ? "on" : "off",
@@ -206,14 +206,14 @@ export const MoreAction: FC<IPcMoreActionProps> = (props) => {
         onVisibleChange={(show: boolean) => {
           if (show) {
             track?.(
-              ILLA_MIXPANEL_EVENT_TYPE.SHOW,
+              ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
               {
                 element: "more",
               },
               "both",
             )
             track?.(
-              ILLA_MIXPANEL_EVENT_TYPE.SHOW,
+              ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
               {
                 element: "allow_manage",
                 parameter2:

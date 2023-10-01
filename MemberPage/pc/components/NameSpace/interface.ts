@@ -1,4 +1,4 @@
-import { USER_STATUS } from "@illa-public/user-data"
+import { USER_STATUS } from "@zweb-public/user-data"
 
 export interface NameSpaceProps {
   name: string

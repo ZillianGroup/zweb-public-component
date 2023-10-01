@@ -1,7 +1,7 @@
 import {
   marketplaceRequest,
   publicMarketplaceRequest,
-} from "@illa-public/illa-net"
+} from "@zweb-public/zweb-net"
 import {
   AppProductResponse,
   PRODUCT_SORT_BY,

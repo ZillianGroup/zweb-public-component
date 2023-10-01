@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export function applyAvatarStyle(
   background: string,
@@ -8,8 +8,8 @@ export function applyAvatarStyle(
 ): SerializedStyles {
   const statusStyle = emptyStatus
     ? css`
-        border: 1px dashed ${globalColor(`--${illaPrefix}-grayBlue-07`)};
-        background: ${globalColor(`--${illaPrefix}-white-01`)};
+        border: 1px dashed ${globalColor(`--${zwebPrefix}-grayBlue-07`)};
+        background: ${globalColor(`--${zwebPrefix}-white-01`)};
       `
     : ""
   return css`
@@ -20,8 +20,8 @@ export function applyAvatarStyle(
     justify-content: center;
     align-items: center;
     background: ${background};
-    color: ${globalColor(`--${illaPrefix}-white-01`)};
-    border: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-09`)};
+    color: ${globalColor(`--${zwebPrefix}-white-01`)};
+    border: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-09`)};
     width: ${size}px;
     height: ${size}px;
     line-height: ${size}px;

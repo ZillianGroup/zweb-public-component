@@ -1,29 +1,29 @@
 import { FC, ReactNode, createContext, useCallback, useMemo } from "react"
 import {
-  ILLAProperties,
-  ILLA_MIXPANEL_EVENT_TYPE,
-  ILLA_PAGE_NAME,
+  ZWEBProperties,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+  ZWEB_PAGE_NAME,
 } from "./interface"
 
 interface IInject {
   track: (
-    event: ILLA_MIXPANEL_EVENT_TYPE,
-    properties: Omit<ILLAProperties, "page">,
+    event: ZWEB_MIXPANEL_EVENT_TYPE,
+    properties: Omit<ZWEBProperties, "page">,
     extendProperty?: "userRole" | "team_id" | "both",
   ) => void
-  pageName: ILLA_PAGE_NAME
+  pageName: ZWEB_PAGE_NAME
 }
 
 export const MixpanelTrackContext = createContext<IInject>({} as IInject)
 
 interface MixpanelTrackProviderProps {
   basicTrack: (
-    event: ILLA_MIXPANEL_EVENT_TYPE,
-    pageName: ILLA_PAGE_NAME,
-    properties: Omit<ILLAProperties, "page">,
+    event: ZWEB_MIXPANEL_EVENT_TYPE,
+    pageName: ZWEB_PAGE_NAME,
+    properties: Omit<ZWEBProperties, "page">,
     extendProperty?: "userRole" | "team_id" | "both",
   ) => void
-  pageName: ILLA_PAGE_NAME
+  pageName: ZWEB_PAGE_NAME
   children: ReactNode
 }
 
@@ -34,8 +34,8 @@ export const MixpanelTrackProvider: FC<MixpanelTrackProviderProps> = (
 
   const track = useCallback(
     (
-      event: ILLA_MIXPANEL_EVENT_TYPE,
-      properties: Omit<ILLAProperties, "page">,
+      event: ZWEB_MIXPANEL_EVENT_TYPE,
+      properties: Omit<ZWEBProperties, "page">,
       extendProperty?: "userRole" | "team_id" | "both",
     ) => {
       basicTrack(event, pageName, properties, extendProperty)

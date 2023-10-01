@@ -3,7 +3,7 @@ import {
   CloseIcon,
   Drawer,
   TriggerProvider,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { AgentToMarketplaceMobile } from "../../component/AgentToMarketplace/mobile"
 import { MarketShareAgentProps } from "../interface"
 import {

@@ -3,8 +3,8 @@ import {
   TeamInfo,
   USER_ROLE,
   getPlanUtils,
-} from "@illa-public/user-data"
-import { isCloudVersion } from "@illa-public/utils"
+} from "@zweb-public/user-data"
+import { isCloudVersion } from "@zweb-public/utils"
 import { AttributeConfigList } from "./attributeConfigList"
 import { FreePlanAttributeConfigList } from "./freePlanAttributeConfigList"
 import {

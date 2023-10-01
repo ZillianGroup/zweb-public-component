@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
-import { Button, Modal } from "@illa-design/react"
+import { Button, Modal } from "@zweb-design/react"
 import { FREE_TEAM_LIMIT_TYPE } from "../../interface"
 import { MODAL_TEXT } from "./constants"
 import {

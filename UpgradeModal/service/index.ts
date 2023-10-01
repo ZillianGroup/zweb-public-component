@@ -1,5 +1,5 @@
-import { authCloudRequest } from "@illa-public/illa-net"
-import { SUBSCRIBE_PLAN, SUBSCRIPTION_CYCLE } from "@illa-public/user-data"
+import { authCloudRequest } from "@zweb-public/zweb-net"
+import { SUBSCRIBE_PLAN, SUBSCRIPTION_CYCLE } from "@zweb-public/user-data"
 import { PurchaseItem, SubscribeResponse, TeamSubscription } from "./interface"
 
 export const purchase = async (

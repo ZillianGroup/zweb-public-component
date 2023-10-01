@@ -2,7 +2,7 @@ import {
   getCurrentMemberList,
   getCurrentTeamInfo,
   getCurrentUserId,
-} from "@illa-public/user-data"
+} from "@zweb-public/user-data"
 import { FC } from "react"
 import { useSelector } from "react-redux"
 import { MobileMemberListItem } from "../ListItem"

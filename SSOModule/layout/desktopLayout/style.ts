@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 import sectionBg from "../../assets/left-cover.svg"
 
 export const layoutWrapperStyle = css`
@@ -37,7 +37,7 @@ export const sectionBackgroundStyle = css`
   top: 0;
 `
 
-export const illaLogoStyle = css`
+export const zwebLogoStyle = css`
   position: absolute;
   top: 40px;
   left: 24px;
@@ -47,7 +47,7 @@ export const sloganStyle = css`
   font-weight: 700;
   font-size: 34px;
   line-height: 50px;
-  color: ${globalColor(`--${illaPrefix}-white-01`)};
+  color: ${globalColor(`--${zwebPrefix}-white-01`)};
   word-break: break-word;
 `
 export const policyStyle = css`
@@ -55,5 +55,5 @@ export const policyStyle = css`
   font-size: 12px;
   line-height: 20px;
   width: 400px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-03`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-03`)};
 `

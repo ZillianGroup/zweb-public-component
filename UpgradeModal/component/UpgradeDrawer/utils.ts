@@ -1,5 +1,5 @@
-import { SUBSCRIPTION_CYCLE } from "@illa-public/user-data"
-import { isSubscribeForDrawer } from "@illa-public/utils"
+import { SUBSCRIPTION_CYCLE } from "@zweb-public/user-data"
+import { isSubscribeForDrawer } from "@zweb-public/utils"
 import { DrawerDefaultConfig } from "../../interface"
 import { DrawerSubscribeInfo } from "./interface"
 

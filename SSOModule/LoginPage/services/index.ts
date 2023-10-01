@@ -1,4 +1,4 @@
-import { notNeedAuthCloudRequest } from "@illa-public/illa-net"
+import { notNeedAuthCloudRequest } from "@zweb-public/zweb-net"
 import { OAUTH_REDIRECT_URL } from "../../constants/users"
 
 export const fetchOAuthURI = async (

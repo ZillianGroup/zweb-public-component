@@ -6,8 +6,8 @@ import {
   DeleteIcon,
   Input,
   globalColor,
-  illaPrefix,
-} from "@illa-design/react"
+  zwebPrefix,
+} from "@zweb-design/react"
 import { RecordEditorProps } from "./interface"
 import {
   applyRecordEditorContainerStyle,
@@ -119,7 +119,7 @@ export const RecordEditor: FC<RecordEditorProps> = (props) => {
                 onAdd?.(name)
               }}
               leftIcon={
-                <AddIcon color={globalColor(`--${illaPrefix}-techPurple-08`)} />
+                <AddIcon color={globalColor(`--${zwebPrefix}-techPurple-08`)} />
               }
             >
               {t("editor.action.panel.btn.new")}

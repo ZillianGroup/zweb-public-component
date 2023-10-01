@@ -1,6 +1,6 @@
-import { authCloudRequest } from "@illa-public/illa-net"
-import { USER_ROLE } from "@illa-public/user-data"
-import { isCloudVersion } from "@illa-public/utils"
+import { authCloudRequest } from "@zweb-public/zweb-net"
+import { USER_ROLE } from "@zweb-public/user-data"
+import { isCloudVersion } from "@zweb-public/utils"
 
 interface IInviteByEmailResponseData {
   aiAgentID: string

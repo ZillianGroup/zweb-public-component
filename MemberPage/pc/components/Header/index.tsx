@@ -1,5 +1,5 @@
-import { InviteMemberPC } from "@illa-public/invite-modal"
-import { useUpgradeModal } from "@illa-public/upgrade-modal"
+import { InviteMemberPC } from "@zweb-public/invite-modal"
+import { useUpgradeModal } from "@zweb-public/upgrade-modal"
 import {
   MemberInfo,
   USER_ROLE,
@@ -7,21 +7,21 @@ import {
   getCurrentTeamInfo,
   getCurrentUser,
   teamActions,
-} from "@illa-public/user-data"
+} from "@zweb-public/user-data"
 import {
   canManageInvite,
   isBiggerThanTargetRole,
   openInviteModal, showInviteModal,
-} from "@illa-public/user-role-utils"
+} from "@zweb-public/user-role-utils"
 import {
   COPY_STATUS,
   copyToClipboard,
   isCloudVersion,
-} from "@illa-public/utils"
+} from "@zweb-public/utils"
 import { FC, useCallback, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { Button, useMessage } from "@illa-design/react"
+import { Button, useMessage } from "@zweb-design/react"
 import { IPcHeaderProps } from "./interface"
 import { MoreAction } from "./moreAction"
 import { buttonGroup, headerWrapperStyle, titleStyle } from "./style"

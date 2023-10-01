@@ -6,4 +6,4 @@ export const CONFIG_KEY = {
 }
 
 export const LEARN_MORE_LINK =
-  "https://builder.illacloud.com/illa_policy/deploy/app/ILAex4p1C7sk"
+  "https://builder.zilliangroup.com/zweb_policy/deploy/app/ILAex4p1C7sk"

@@ -1,4 +1,4 @@
-import { LayoutAutoChange } from "@illa-public/layout-auto-change"
+import { LayoutAutoChange } from "@zweb-public/layout-auto-change"
 import { FC } from "react"
 import { IMemberListPageProps } from "./interface"
 import MobileMemberPage from "./mobile"

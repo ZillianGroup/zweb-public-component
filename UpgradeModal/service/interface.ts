@@ -3,7 +3,7 @@ import {
   SUBSCRIPTION_CYCLE,
   SubscribeInfo,
   TotalTeamLicense,
-} from "@illa-public/user-data"
+} from "@zweb-public/user-data"
 
 export enum CUSTOM_CYCLE {
   LIFETIME = 3,

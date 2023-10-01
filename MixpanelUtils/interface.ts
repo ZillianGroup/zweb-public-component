@@ -1,24 +1,24 @@
-type ILLAPropertiesPrefix<T extends string, U> = `${T}${string & U}`
+type ZWEBPropertiesPrefix<T extends string, U> = `${T}${string & U}`
 
-type ILLAPrefixedPropertiesInterface<T extends string, U> = {
-  [key in ILLAPropertiesPrefix<T, keyof U>]: unknown
+type ZWEBPrefixedPropertiesInterface<T extends string, U> = {
+  [key in ZWEBPropertiesPrefix<T, keyof U>]: unknown
 }
 
-interface ILLAExtendedProperties {
+interface ZWEBExtendedProperties {
   [key: string]: unknown
 }
 
-interface ILLABaseProperties {
-  page: ILLA_PAGE_NAME
+interface ZWEBBaseProperties {
+  page: ZWEB_PAGE_NAME
   element?: string
   consume?: string | number
   team_id?: string
   user_id?: string
 }
 
-type ILLAPrefixedExtendProperties = ILLAPrefixedPropertiesInterface<
+type ZWEBPrefixedExtendProperties = ZWEBPrefixedPropertiesInterface<
   "parameter",
-  ILLAExtendedProperties
+  ZWEBExtendedProperties
 >
 
 /**
@@ -38,9 +38,9 @@ type ILLAPrefixedExtendProperties = ILLAPrefixedPropertiesInterface<
  * parameter11: user_type
  * 其他字段均为预留字段
  */
-export type ILLAProperties = ILLABaseProperties & ILLAPrefixedExtendProperties
+export type ZWEBProperties = ZWEBBaseProperties & ZWEBPrefixedExtendProperties
 
-export enum ILLA_MIXPANEL_EVENT_TYPE {
+export enum ZWEB_MIXPANEL_EVENT_TYPE {
   VISIT = "visit",
   SHOW = "show",
   CLICK = "click",
@@ -59,10 +59,10 @@ export enum ILLA_MIXPANEL_EVENT_TYPE {
   HOVER = "hover",
   CHANGE = "change",
   DELETE = "delete",
-  ILLA_ACTIVE = "illa_active",
+  ZWEB_ACTIVE = "zweb_active",
 }
 
-export enum ILLA_MIXPANEL_CLOUD_PAGE_NAME {
+export enum ZWEB_MIXPANEL_CLOUD_PAGE_NAME {
   HOMEPAGE = "cloud_homepage",
   WORKSPACE = "cloud_workspace",
   MEMBER = "cloud_member",
@@ -81,16 +81,16 @@ export enum ILLA_MIXPANEL_CLOUD_PAGE_NAME {
   LINKED_SETTING = 'linked_setting',
 }
 
-export enum ILLA_MIXPANEL_PUBLIC_PAGE_NAME {
+export enum ZWEB_MIXPANEL_PUBLIC_PAGE_NAME {
   LOGIN = "login",
   SIGNUP = "sign_up",
   FORGET_PASSWORD = "forget_password",
   ERROR_PAGE = "error_page",
   MOBILE_FORBIDDEN = "mobile_forbidden",
-  PLACEHOLDER = "illa",
+  PLACEHOLDER = "zweb",
 }
 
-export enum ILLA_MIXPANEL_BUILDER_PAGE_NAME {
+export enum ZWEB_MIXPANEL_BUILDER_PAGE_NAME {
   APP = "builder_app",
   RESOURCE = "builder_resource",
   TUTORIAL = "builder_tutorial",
@@ -103,15 +103,15 @@ export enum ILLA_MIXPANEL_BUILDER_PAGE_NAME {
   AI_AGENT_EDIT = 'ai_agent_edit',
 }
 
-export enum ILLA_MIXPANEL_MARKET_PAGE_NAME {
+export enum ZWEB_MIXPANEL_MARKET_PAGE_NAME {
   COMMUNITY_AGENT_HOMEPAGE = 'community_agent_homepage',
   COMMUNITY_AGENT_DETAIL = 'community_agent_detail',
   COMMUNITY_APP_HOMEPAGE = 'community_app_homepage',
   COMMUNITY_APP_DETAIL = 'community_app_detail',
 }
 
-export type ILLA_PAGE_NAME =
-  | ILLA_MIXPANEL_CLOUD_PAGE_NAME
-  | ILLA_MIXPANEL_PUBLIC_PAGE_NAME
-  | ILLA_MIXPANEL_BUILDER_PAGE_NAME
-  | ILLA_MIXPANEL_MARKET_PAGE_NAME
+export type ZWEB_PAGE_NAME =
+  | ZWEB_MIXPANEL_CLOUD_PAGE_NAME
+  | ZWEB_MIXPANEL_PUBLIC_PAGE_NAME
+  | ZWEB_MIXPANEL_BUILDER_PAGE_NAME
+  | ZWEB_MIXPANEL_MARKET_PAGE_NAME

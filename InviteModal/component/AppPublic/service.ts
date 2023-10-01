@@ -1,4 +1,4 @@
-import { builderRequest, marketplaceTeamRequest } from "@illa-public/illa-net"
+import { builderRequest, marketplaceTeamRequest } from "@zweb-public/zweb-net"
 
 export const updateAppPublicConfig = async (
   isPublic: boolean,

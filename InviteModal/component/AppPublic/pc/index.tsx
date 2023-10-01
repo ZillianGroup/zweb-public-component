@@ -1,16 +1,16 @@
-import { UpgradeIcon } from "@illa-public/icon"
+import { UpgradeIcon } from "@zweb-public/icon"
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
+  ZWEB_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
-import { useUpgradeModal } from "@illa-public/upgrade-modal"
-import { USER_ROLE } from "@illa-public/user-data"
-import { isBiggerThanTargetRole } from "@illa-public/user-role-utils"
+} from "@zweb-public/mixpanel-utils"
+import { useUpgradeModal } from "@zweb-public/upgrade-modal"
+import { USER_ROLE } from "@zweb-public/user-data"
+import { isBiggerThanTargetRole } from "@zweb-public/user-role-utils"
 import {
   getMarketLinkTemplate,
   getPublicLinkTemplate,
   isCloudVersion,
-} from "@illa-public/utils"
+} from "@zweb-public/utils"
 import { FC, useCallback, useContext, useState } from "react"
 import { useTranslation } from "react-i18next"
 import {
@@ -24,7 +24,7 @@ import {
   getColor,
   useMergeValue,
   useMessage,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { ShareBlockPC } from "../../ShareBlock/pc"
 import { AppPublicProps } from "../interface"
 import {
@@ -87,7 +87,7 @@ export const AppPublicPC: FC<AppPublicProps> = (props) => {
   const handleContributeChange = useCallback(
     async (value: boolean) => {
       const currentTime = performance.now()
-      track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+      track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "invite_modal_contribute_switch",
         parameter4: !value,
         parameter5: appID,
@@ -101,7 +101,7 @@ export const AppPublicPC: FC<AppPublicProps> = (props) => {
         } else {
           await fetchRemoveAppToMarket(ownerTeamID, appID)
         }
-        track(ILLA_MIXPANEL_EVENT_TYPE.REQUEST, {
+        track(ZWEB_MIXPANEL_EVENT_TYPE.REQUEST, {
           element: "invite_modal_contribute_switch",
           consume: performance.now() - currentTime,
           parameter2: "suc",
@@ -111,7 +111,7 @@ export const AppPublicPC: FC<AppPublicProps> = (props) => {
         onAppContribute?.(value)
         onAppPublic?.(value)
         value &&
-          track(ILLA_MIXPANEL_EVENT_TYPE.SHOW, {
+          track(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, {
             element: "invite_modal_contribute_copy",
             parameter5: appID,
           })
@@ -119,7 +119,7 @@ export const AppPublicPC: FC<AppPublicProps> = (props) => {
         message.error({
           content: t("user_management.modal.message.make_public_failed"),
         })
-        track(ILLA_MIXPANEL_EVENT_TYPE.REQUEST, {
+        track(ZWEB_MIXPANEL_EVENT_TYPE.REQUEST, {
           element: "invite_modal_contribute_switch",
           consume: performance.now() - currentTime,
           parameter2: "failed",

@@ -1,17 +1,17 @@
-import { Avatar } from "@illa-public/avatar"
-import { ERROR_FLAG, isILLAAPiError } from "@illa-public/illa-net"
+import { Avatar } from "@zweb-public/avatar"
+import { ERROR_FLAG, isZWEBAPiError } from "@zweb-public/zweb-net"
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
+  ZWEB_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
-import { RoleSelector } from "@illa-public/role-selector"
-import { useUpgradeModal } from "@illa-public/upgrade-modal"
-import { USER_ROLE } from "@illa-public/user-data"
-import { isBiggerThanTargetRole } from "@illa-public/user-role-utils"
-import { EMAIL_FORMAT } from "@illa-public/utils"
+} from "@zweb-public/mixpanel-utils"
+import { RoleSelector } from "@zweb-public/role-selector"
+import { useUpgradeModal } from "@zweb-public/upgrade-modal"
+import { USER_ROLE } from "@zweb-public/user-data"
+import { isBiggerThanTargetRole } from "@zweb-public/user-role-utils"
+import { EMAIL_FORMAT } from "@zweb-public/utils"
 import { FC, KeyboardEvent, useCallback, useContext, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { Input, Loading, useMergeValue, useMessage } from "@illa-design/react"
+import { Input, Loading, useMergeValue, useMessage } from "@zweb-design/react"
 import { InviteByEmailProps, InvitedUser } from "../interface"
 import { changeUserRoleByTeamMemberID, inviteByEmail } from "../service"
 import {
@@ -73,7 +73,7 @@ export const InviteByEmailMobile: FC<InviteByEmailProps> = (props) => {
   const handleInvite = useCallback(
     async (e: KeyboardEvent<HTMLInputElement>) => {
       if (!currentValue) return
-      track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+      track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "share_modal_send",
         parameter5: itemID,
       })
@@ -122,7 +122,7 @@ export const InviteByEmailMobile: FC<InviteByEmailProps> = (props) => {
         setCurrentValue("")
         message.success({ content: t("user_management.mes.invite_suc") })
       } catch (e) {
-        if (isILLAAPiError(e)) {
+        if (isZWEBAPiError(e)) {
           if (e.data.errorFlag === ERROR_FLAG.ERROR_FLAG_EMAIL_ALREADY_USED) {
             message.error({
               content: t("user_management.modal.email.invited"),

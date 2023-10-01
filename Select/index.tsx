@@ -5,7 +5,7 @@ import {
   TriggerProps,
   UpIcon,
   zIndex,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { ReactComponent as CheckmarkIcon } from "./assets/success.svg"
 import { SelectProps } from "./interface"
 import {

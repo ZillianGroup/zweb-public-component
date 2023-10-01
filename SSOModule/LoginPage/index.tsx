@@ -1,4 +1,4 @@
-import { LayoutAutoChange } from "@illa-public/layout-auto-change"
+import { LayoutAutoChange } from "@zweb-public/layout-auto-change"
 import { FC } from "react"
 import { FormProvider, useForm } from "react-hook-form"
 import { useParams, useSearchParams } from "react-router-dom"

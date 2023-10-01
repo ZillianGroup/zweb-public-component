@@ -1,13 +1,13 @@
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
+  ZWEB_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
-import { USER_ROLE } from "@illa-public/user-data"
-import { isBiggerThanTargetRole } from "@illa-public/user-role-utils"
-import { getAgentPublicLink } from "@illa-public/utils"
+} from "@zweb-public/mixpanel-utils"
+import { USER_ROLE } from "@zweb-public/user-data"
+import { isBiggerThanTargetRole } from "@zweb-public/user-role-utils"
+import { getAgentPublicLink } from "@zweb-public/utils"
 import { FC, useCallback, useContext, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { Button, useMergeValue, useMessage } from "@illa-design/react"
+import { Button, useMergeValue, useMessage } from "@zweb-design/react"
 import { ReactComponent as DisableInviteIcon } from "../../../asset/DisableInviteLink.svg"
 import { ReactComponent as InviteIcon } from "../../../asset/InviteLink.svg"
 import { ShareBlockMobile } from "../../ShareBlock/mobile"
@@ -52,7 +52,7 @@ export const AgentToMarketplaceMobile: FC<AgentToMarketplaceProps> = (
 
   const handleAgentContribute = useCallback(
     async (value: boolean) => {
-      track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+      track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "share_modal_contribute_switch",
         parameter2: !value,
         parameter5: agentID,

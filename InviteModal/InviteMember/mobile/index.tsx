@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { CloseIcon, Divider, Drawer, TriggerProvider } from "@illa-design/react"
+import { CloseIcon, Divider, Drawer, TriggerProvider } from "@zweb-design/react"
 import { InviteByEmailMobile } from "../../component/InviteByEmail/mobile"
 import { InviteLinkMobile } from "../../component/InviteLink/mobile"
 import { InviteMemberProps } from "../interface"

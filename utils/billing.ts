@@ -1,4 +1,4 @@
-import { SUBSCRIBE_PLAN } from "@illa-public/user-data"
+import { SUBSCRIBE_PLAN } from "@zweb-public/user-data"
 
 // processed as payment only
 export const isSubscribeForDrawer = (subscribePlan?: SUBSCRIBE_PLAN) => {

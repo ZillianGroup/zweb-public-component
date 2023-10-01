@@ -1,5 +1,5 @@
-import { authCloudRequest } from "@illa-public/illa-net"
-import { USER_ROLE } from "@illa-public/user-data"
+import { authCloudRequest } from "@zweb-public/zweb-net"
+import { USER_ROLE } from "@zweb-public/user-data"
 
 
 export interface InviteLinkResp {

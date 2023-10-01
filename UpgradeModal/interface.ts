@@ -1,4 +1,4 @@
-import { SUBSCRIBE_PLAN, SUBSCRIPTION_CYCLE } from "@illa-public/user-data"
+import { SUBSCRIBE_PLAN, SUBSCRIPTION_CYCLE } from "@zweb-public/user-data"
 import { DrawerSubscribeInfo } from "./component/UpgradeDrawer/interface"
 import { PurchaseItem } from "./service/interface"
 

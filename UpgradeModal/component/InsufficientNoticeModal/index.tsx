@@ -1,6 +1,6 @@
 import { FC, useMemo } from "react"
 import { useTranslation } from "react-i18next"
-import { Button, CloseIcon, Modal } from "@illa-design/react"
+import { Button, CloseIcon, Modal } from "@zweb-design/react"
 import { INSUFFICIENT_MODAL_CONFIG_KEY } from "./constants"
 import { InsufficientNoticeModalProps } from "./interface"
 import {

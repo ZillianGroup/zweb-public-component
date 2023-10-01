@@ -1,10 +1,10 @@
 {
-  "name": "@illa-public/illa-net",
+  "name": "@zweb-public/zweb-net",
   "version": "0.0.0",
   "private": true,
   "main": "index.ts",
   "dependencies": {
-    "@illa-public/utils": "workspace:*",
+    "@zweb-public/utils": "workspace:*",
     "axios": "^0.26.1"
   },
   "devDependencies": {

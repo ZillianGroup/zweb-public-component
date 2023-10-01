@@ -1,6 +1,6 @@
 import { css } from "@emotion/react"
-import { getColor } from "@illa-design/react"
-import { applyMobileStyle } from "@illa-public/utils"
+import { getColor } from "@zweb-design/react"
+import { applyMobileStyle } from "@zweb-public/utils"
 
 export const modalStyle = css`
   width: 320px;

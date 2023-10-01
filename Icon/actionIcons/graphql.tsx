@@ -1,4 +1,4 @@
-import { createIcon } from "@illa-design/react"
+import { createIcon } from "@zweb-design/react"
 
 const GraphQLIcon = createIcon({
   title: "GraphQLIcon",

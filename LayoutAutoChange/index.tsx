@@ -1,4 +1,4 @@
-import { isMobileByWindowSize } from "@illa-public/utils"
+import { isMobileByWindowSize } from "@zweb-public/utils"
 import { FC, ReactNode } from "react"
 import { useWindowSize } from "react-use"
 

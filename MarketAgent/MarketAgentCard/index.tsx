@@ -1,7 +1,7 @@
-import { Avatar } from "@illa-public/avatar"
-import { formatNumForAgent } from "@illa-public/utils"
+import { Avatar } from "@zweb-public/avatar"
+import { formatNumForAgent } from "@zweb-public/utils"
 import { FC } from "react"
-import { ForkIcon, PlayOutlineIcon, StarOutlineIcon } from "@illa-design/react"
+import { ForkIcon, PlayOutlineIcon, StarOutlineIcon } from "@zweb-design/react"
 import { getLLM } from "../modelList"
 import { MarketAgentCardProps } from "./interface"
 import {

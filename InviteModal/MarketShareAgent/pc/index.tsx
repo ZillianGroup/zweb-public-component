@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
-import { CloseIcon, Modal, TabPane, Tabs } from "@illa-design/react"
+import { CloseIcon, Modal, TabPane, Tabs } from "@zweb-design/react"
 import { ShareAgentTab } from "../../ShareAgent/interface"
 import { AgentToMarketplacePC } from "../../component/AgentToMarketplace/pc"
 import { MarketShareAgentProps } from "../interface"

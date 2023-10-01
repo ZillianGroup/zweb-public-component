@@ -1,6 +1,6 @@
 import { css } from "@emotion/react"
-import { getColor } from "@illa-design/react"
-import { applyMobileStyle } from "@illa-public/utils"
+import { getColor } from "@zweb-design/react"
+import { applyMobileStyle } from "@zweb-public/utils"
 
 export const modalMaskStyle = css`
   background-color: ${getColor("white", "05")};

@@ -1,4 +1,4 @@
-import { getColorByString } from "@illa-public/utils"
+import { getColorByString } from "@zweb-public/utils"
 import { FC, useMemo } from "react"
 import { AvatarProps } from "./interface"
 import { applyAvatarStyle, avatarImgStyle } from "./style"

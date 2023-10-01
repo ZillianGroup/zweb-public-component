@@ -1,9 +1,9 @@
 import { SerializedStyles } from "@emotion/react"
-import { ILLACodeMirrorProps } from "./CodeMirror/interface"
+import { ZWEBCodeMirrorProps } from "./CodeMirror/interface"
 
 export interface CodeEditorProps
   extends Omit<
-    ILLACodeMirrorProps,
+    ZWEBCodeMirrorProps,
     | "hasError"
     | "resultType"
     | "result"

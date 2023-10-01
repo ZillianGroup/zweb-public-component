@@ -1,6 +1,6 @@
-import { InviteMemberMobile } from "@illa-public/invite-modal"
-import { useUpgradeDrawer, useUpgradeModal } from "@illa-public/upgrade-modal"
-import { UsageCard } from "@illa-public/usage-card"
+import { InviteMemberMobile } from "@zweb-public/invite-modal"
+import { useUpgradeDrawer, useUpgradeModal } from "@zweb-public/upgrade-modal"
+import { UsageCard } from "@zweb-public/usage-card"
 import {
   SUBSCRIBE_PLAN,
   SUBSCRIPTION_CYCLE,
@@ -9,21 +9,21 @@ import {
   getCurrentUser,
   getPlanUtils,
   teamActions,
-} from "@illa-public/user-data"
+} from "@zweb-public/user-data"
 import {
   canManageInvite,
   canManagePayment,
   showInviteModal,
-} from "@illa-public/user-role-utils"
+} from "@zweb-public/user-role-utils"
 import {
   COPY_STATUS,
   copyToClipboard,
   isCloudVersion,
-} from "@illa-public/utils"
+} from "@zweb-public/utils"
 import { FC, useCallback, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { Button, useMessage } from "@illa-design/react"
+import { Button, useMessage } from "@zweb-design/react"
 import { fetchCurrentUserTeamsInfo } from "../services"
 import { MobileMemberList } from "./List"
 import {

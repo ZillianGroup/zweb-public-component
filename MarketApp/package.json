@@ -1,12 +1,12 @@
 {
-  "name": "@illa-public/market-app",
+  "name": "@zweb-public/market-app",
   "version": "0.0.0",
   "private": true,
   "main": "index.ts",
   "dependencies": {
-    "@illa-public/avatar": "workspace:*",
-    "@illa-public/utils": "workspace:*",
-    "@illa-public/illa-net": "workspace:*"
+    "@zweb-public/avatar": "workspace:*",
+    "@zweb-public/utils": "workspace:*",
+    "@zweb-public/zweb-net": "workspace:*"
   },
   "devDependencies": {
     "tsconfig": "workspace:*"
@@ -16,7 +16,7 @@
     "react-dom": "^18.2.0",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
-    "@illa-design/react": "workspace:*",
+    "@zweb-design/react": "workspace:*",
     "@emotion/react": "*",
     "i18next": "^22.4.9"
   }

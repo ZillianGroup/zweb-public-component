@@ -1,9 +1,9 @@
 import { AxiosResponse } from "axios"
-import { ILLAApiError } from "./interface"
+import { ZWEBApiError } from "./interface"
 
-export const isILLAAPiError = (
+export const isZWEBAPiError = (
   error: unknown,
-): error is AxiosResponse<ILLAApiError> => {
+): error is AxiosResponse<ZWEBApiError> => {
   return (
     typeof error === "object" &&
     error !== null &&

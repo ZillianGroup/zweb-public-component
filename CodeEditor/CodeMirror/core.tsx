@@ -11,12 +11,12 @@ import {
 } from "@codemirror/view"
 import { FC, useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { useBasicSetup } from "./extensions"
-import { ILLACodeMirrorProps } from "./interface"
+import { ZWEBCodeMirrorProps } from "./interface"
 import { applyEditorWrapperStyle } from "./style"
-import { ILLACodeMirrorTheme } from "./theme"
+import { ZWEBCodeMirrorTheme } from "./theme"
 
 // thk ReactCodeMirror:https://github.com/uiwjs/react-codemirror
-export const ILLACodeMirrorCore: FC<ILLACodeMirrorProps> = (props) => {
+export const ZWEBCodeMirrorCore: FC<ZWEBCodeMirrorProps> = (props) => {
   const {
     className,
     value,
@@ -62,7 +62,7 @@ export const ILLACodeMirrorCore: FC<ILLACodeMirrorProps> = (props) => {
           maxWidth,
           minWidth,
         },
-        ...ILLACodeMirrorTheme,
+        ...ZWEBCodeMirrorTheme,
       }),
     [height, maxHeight, maxWidth, minHeight, minWidth, width],
   )

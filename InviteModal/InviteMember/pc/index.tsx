@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
-import { CloseIcon, Modal, TabPane, Tabs } from "@illa-design/react"
+import { CloseIcon, Modal, TabPane, Tabs } from "@zweb-design/react"
 import { InviteByEmailPC } from "../../component/InviteByEmail/pc"
 import { InviteLinkPC } from "../../component/InviteLink/pc"
 import { InviteMemberProps } from "../interface"

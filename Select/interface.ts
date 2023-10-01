@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react"
-import { TriggerProps } from "@illa-design/react"
+import { TriggerProps } from "@zweb-design/react"
 
 export interface SelectProps<Value = unknown>
   extends Omit<HTMLAttributes<HTMLDivElement>, "onChange"> {

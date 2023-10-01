@@ -1,5 +1,5 @@
-import { Avatar } from "@illa-public/avatar"
-import { USER_STATUS } from "@illa-public/user-data"
+import { Avatar } from "@zweb-public/avatar"
+import { USER_STATUS } from "@zweb-public/user-data"
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
 import { NameSpaceProps } from "./interface"

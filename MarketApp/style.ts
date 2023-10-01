@@ -1,6 +1,6 @@
 import { css } from "@emotion/react"
-import { applyMobileStyle } from "@illa-public/utils"
-import { getColor } from "@illa-design/react"
+import { applyMobileStyle } from "@zweb-public/utils"
+import { getColor } from "@zweb-design/react"
 
 export const card_height = 156
 

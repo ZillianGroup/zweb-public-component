@@ -1,15 +1,15 @@
 {
-  "name": "@illa-public/upgrade-modal",
+  "name": "@zweb-public/upgrade-modal",
   "version": "0.0.0",
   "private": true,
   "main": "index.tsx",
   "dependencies": {
-    "@illa-public/icon": "workspace:*",
-    "@illa-public/illa-net": "workspace:*",
-    "@illa-public/text-link": "workspace:*",
-    "@illa-public/user-data": "workspace:*",
-    "@illa-public/user-role-utils": "workspace:*",
-    "@illa-public/utils": "workspace:*",
+    "@zweb-public/icon": "workspace:*",
+    "@zweb-public/zweb-net": "workspace:*",
+    "@zweb-public/text-link": "workspace:*",
+    "@zweb-public/user-data": "workspace:*",
+    "@zweb-public/user-role-utils": "workspace:*",
+    "@zweb-public/utils": "workspace:*",
     "react-router-dom": "^6.14.0",
     "react-use": "^17.4.0",
     "uuid": "^8.3.2"
@@ -22,7 +22,7 @@
   },
   "peerDependencies": {
     "@emotion/react": "*",
-    "@illa-design/react": "workspace:*",
+    "@zweb-design/react": "workspace:*",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "react": "^18.2.0",

@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const formStyle: SerializedStyles = css`
   position: relative;
@@ -20,18 +20,18 @@ export const formTitleStyle: SerializedStyles = css`
   font-size: 48rem;
   line-height: 64rem;
   font-weight: 500;
-  color: ${globalColor(`--${illaPrefix}-gray-02`)};
+  color: ${globalColor(`--${zwebPrefix}-gray-02`)};
 `
 
 export const descriptionStyle: SerializedStyles = css`
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
 `
 
 export const errorMsgStyle: SerializedStyles = css`
   position: absolute;
   font-size: 24rem;
   padding-top: 8rem;
-  color: ${globalColor(`--${illaPrefix}-orange-03`)};
+  color: ${globalColor(`--${zwebPrefix}-orange-03`)};
 `
 
 export const forgotPwdStyle: SerializedStyles = css`

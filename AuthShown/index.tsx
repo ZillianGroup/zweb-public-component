@@ -1,8 +1,8 @@
-import { USER_ROLE } from "@illa-public/user-data"
+import { USER_ROLE } from "@zweb-public/user-data"
 import {
   isBiggerThanTargetRole,
   isSmallThanTargetRole,
-} from "@illa-public/user-role-utils"
+} from "@zweb-public/user-role-utils"
 import { FC, useMemo } from "react"
 import { AuthHiddenProps, SHOW_RULES } from "./interface"
 

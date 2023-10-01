@@ -1,14 +1,14 @@
-import { useUpgradeDrawer } from "@illa-public/upgrade-modal"
-import { UsageCard } from "@illa-public/usage-card"
+import { useUpgradeDrawer } from "@zweb-public/upgrade-modal"
+import { UsageCard } from "@zweb-public/usage-card"
 import {
   SUBSCRIBE_PLAN,
   SUBSCRIPTION_CYCLE,
   getCurrentTeamInfo,
   getPlanUtils,
   teamActions,
-} from "@illa-public/user-data"
-import { canManagePayment } from "@illa-public/user-role-utils"
-import { isCloudVersion } from "@illa-public/utils"
+} from "@zweb-public/user-data"
+import { canManagePayment } from "@zweb-public/user-role-utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"

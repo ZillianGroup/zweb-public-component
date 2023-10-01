@@ -1,4 +1,4 @@
-import { marketplaceRequest } from "@illa-public/illa-net"
+import { marketplaceRequest } from "@zweb-public/zweb-net"
 import { MarketAIAgent } from "./interface"
 
 

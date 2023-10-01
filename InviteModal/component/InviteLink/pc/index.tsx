@@ -1,11 +1,11 @@
-import { RoleSelector } from "@illa-public/role-selector"
-import { useUpgradeModal } from "@illa-public/upgrade-modal"
-import { USER_ROLE } from "@illa-public/user-data"
+import { RoleSelector } from "@zweb-public/role-selector"
+import { useUpgradeModal } from "@zweb-public/upgrade-modal"
+import { USER_ROLE } from "@zweb-public/user-data"
 import {
   isBiggerThanTargetRole,
   isSmallThanTargetRole,
-} from "@illa-public/user-role-utils"
-import { isCloudVersion } from "@illa-public/utils"
+} from "@zweb-public/user-role-utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { FC, useCallback, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import {
@@ -19,7 +19,7 @@ import {
   getColor,
   useMergeValue,
   useMessage,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { InviteLinkProps } from "../interface"
 import {
   disableInviteLink,

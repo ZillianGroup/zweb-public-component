@@ -1,10 +1,10 @@
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
+  ZWEB_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
-import { USER_ROLE } from "@illa-public/user-data"
-import { isBiggerThanTargetRole } from "@illa-public/user-role-utils"
-import { getAgentPublicLink } from "@illa-public/utils"
+} from "@zweb-public/mixpanel-utils"
+import { USER_ROLE } from "@zweb-public/user-data"
+import { isBiggerThanTargetRole } from "@zweb-public/user-role-utils"
+import { getAgentPublicLink } from "@zweb-public/utils"
 import { FC, useContext, useState } from "react"
 import { useTranslation } from "react-i18next"
 import {
@@ -15,7 +15,7 @@ import {
   getColor,
   useMergeValue,
   useMessage,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { ShareBlockPC } from "../../ShareBlock/pc"
 import { AgentToMarketplaceProps } from "../interface"
 import { fetchRemoveToMarketplace, makeAgentContribute } from "../service"
@@ -76,7 +76,7 @@ export const AgentToMarketplacePC: FC<AgentToMarketplaceProps> = (props) => {
               checked={agentContributed}
               colorScheme={getColor("grayBlue", "02")}
               onChange={async (value) => {
-                track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+                track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                   element: "share_modal_contribute_switch",
                   parameter2: !value,
                   parameter5: agentID,

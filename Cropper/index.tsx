@@ -1,7 +1,7 @@
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
+  ZWEB_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
+} from "@zweb-public/mixpanel-utils"
 import {
   ChangeEvent,
   FC,
@@ -13,7 +13,7 @@ import {
 } from "react"
 import EasyCropper, { Area } from "react-easy-crop"
 import { useTranslation } from "react-i18next"
-import { Button, CloseIcon, Modal, Spin, useMessage } from "@illa-design/react"
+import { Button, CloseIcon, Modal, Spin, useMessage } from "@zweb-design/react"
 import { ReactComponent as RotateRightIcon } from "./assets/rotate-right.svg"
 import {
   FILE_INIT_ASPECT,
@@ -76,7 +76,7 @@ export const AvatarUpload: FC<AvatarUploadProps> = (props) => {
 
   const onCloseModal = () => {
     track?.(
-      ILLA_MIXPANEL_EVENT_TYPE.CLICK,
+      ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "avater_crop_close",
       },
@@ -100,7 +100,7 @@ export const AvatarUpload: FC<AvatarUploadProps> = (props) => {
       if (file.size >= FILE_SIZE_LIMIT) {
         message.error({ content: t("image_exceed") })
         track?.(
-          ILLA_MIXPANEL_EVENT_TYPE.VALIDATE,
+          ZWEB_MIXPANEL_EVENT_TYPE.VALIDATE,
           {
             element: "avater_crop_save",
             parameter1: Math.floor(file.size / 1024),
@@ -114,7 +114,7 @@ export const AvatarUpload: FC<AvatarUploadProps> = (props) => {
       setFile(file)
       setModalVisible(true)
       track?.(
-        ILLA_MIXPANEL_EVENT_TYPE.VALIDATE,
+        ZWEB_MIXPANEL_EVENT_TYPE.VALIDATE,
         {
           element: "avater_crop_save",
           parameter1: Math.floor(file.size / 1024),
@@ -139,7 +139,7 @@ export const AvatarUpload: FC<AvatarUploadProps> = (props) => {
 
   const handleCrop = async () => {
     track?.(
-      ILLA_MIXPANEL_EVENT_TYPE.CLICK,
+      ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "avater_crop_save",
       },
@@ -168,7 +168,7 @@ export const AvatarUpload: FC<AvatarUploadProps> = (props) => {
   useEffect(() => {
     if (modalVisible) {
       track?.(
-        ILLA_MIXPANEL_EVENT_TYPE.SHOW,
+        ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
         {
           element: "avater_crop",
         },

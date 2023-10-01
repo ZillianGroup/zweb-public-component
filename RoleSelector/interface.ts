@@ -1,4 +1,4 @@
-import { USER_ROLE } from "@illa-public/user-data"
+import { USER_ROLE } from "@zweb-public/user-data"
 
 export interface UserRoleItem {
   role: USER_ROLE

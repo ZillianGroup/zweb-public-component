@@ -1,12 +1,12 @@
 {
-  "name": "@illa-public/auth-shown",
+  "name": "@zweb-public/auth-shown",
   "version": "0.0.0",
   "private": true,
   "main": "index.tsx",
   "dependencies": {
-    "@illa-public/utils": "workspace:*",
-    "@illa-public/user-role-utils": "workspace:*",
-    "@illa-public/user-data": "workspace:*"
+    "@zweb-public/utils": "workspace:*",
+    "@zweb-public/user-role-utils": "workspace:*",
+    "@zweb-public/user-data": "workspace:*"
   },
   "devDependencies": {
     "tsconfig": "workspace:*"
@@ -16,7 +16,7 @@
     "react-dom": "^18.2.0",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
-    "@illa-design/react": "workspace:*",
+    "@zweb-design/react": "workspace:*",
     "@emotion/react": "*"
   }
 }

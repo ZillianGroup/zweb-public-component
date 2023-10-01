@@ -1,4 +1,4 @@
-import { createIcon } from "@illa-design/react"
+import { createIcon } from "@zweb-design/react"
 
 const NeonIcon = createIcon({
   title: "NeonIcon",

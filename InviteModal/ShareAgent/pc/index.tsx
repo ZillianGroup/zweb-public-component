@@ -1,17 +1,17 @@
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
+  ZWEB_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
-import { USER_ROLE } from "@illa-public/user-data"
+} from "@zweb-public/mixpanel-utils"
+import { USER_ROLE } from "@zweb-public/user-data"
 import {
   ACTION_MANAGE,
   ATTRIBUTE_GROUP,
   canManage,
   isBiggerThanTargetRole,
-} from "@illa-public/user-role-utils"
+} from "@zweb-public/user-role-utils"
 import { FC, useContext, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { CloseIcon, Modal, TabPane, Tabs } from "@illa-design/react"
+import { CloseIcon, Modal, TabPane, Tabs } from "@zweb-design/react"
 import { AgentToMarketplacePC } from "../../component/AgentToMarketplace/pc"
 import { InviteByEmailPC } from "../../component/InviteByEmail/pc"
 import { InviteLinkPC } from "../../component/InviteLink/pc"
@@ -71,7 +71,7 @@ export const ShareAgentPC: FC<ShareAgentProps> = (props) => {
           colorScheme="grayBlue"
           withoutBorderLine
           onChange={(activeKey) => {
-            track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+            track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
               element: "share_modal_tab",
               parameter2: activeKey,
               parameter5: props.agentID,

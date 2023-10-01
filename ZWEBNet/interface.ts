@@ -5,7 +5,7 @@ export interface RequestHandlerOptions {
   teamID?: string
 }
 
-export interface ILLAApiError {
+export interface ZWEBApiError {
   errorCode: string | number
   errorFlag: ERROR_FLAG
   errorMessage: string

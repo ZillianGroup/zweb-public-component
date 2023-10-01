@@ -1,7 +1,7 @@
 import { StorageDataShape, Storage_Type } from "./interface"
 
-export default class ILLAStorage {
-  prefix: string = "ILLA_STORAGE@0.0.1"
+export default class ZWEBStorage {
+  prefix: string = "ZWEB_STORAGE@0.0.1"
   defaultExpire: number = 5
 
   constructor(prefix?: string, defaultExpire?: number) {
@@ -41,7 +41,7 @@ export default class ILLAStorage {
       const stringifyData = JSON.stringify(data)
       window[type].setItem(this.autoAddPrefix(key), stringifyData)
     } catch (e) {
-      console.error(`[ILLA_STORAGE] setStorage error: ${e}`)
+      console.error(`[ZWEB_STORAGE] setStorage error: ${e}`)
     }
   }
 
@@ -59,7 +59,7 @@ export default class ILLAStorage {
       }
       storage = JSON.parse(stringifyData)
     } catch (e) {
-      console.error(`[ILLA_STORAGE] getStorage error: ${e}`)
+      console.error(`[ZWEB_STORAGE] getStorage error: ${e}`)
       return undefined
     }
 

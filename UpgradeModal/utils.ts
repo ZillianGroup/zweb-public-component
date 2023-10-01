@@ -1,4 +1,4 @@
-import { ERROR_FLAG, isILLAAPiError } from "@illa-public/illa-net"
+import { ERROR_FLAG, isZWEBAPiError } from "@zweb-public/zweb-net"
 import { createCollarModal, createTeamLimitModal } from "./hook"
 import { CollarModalType, FREE_TEAM_LIMIT_TYPE } from "./interface"
 
@@ -13,7 +13,7 @@ export function getSuccessRedirectWithParams(
     )
     .join("&")
 
-  return `${process.env.ILLA_CLOUD_URL}${redirectPath}?${paramString}`
+  return `${process.env.ZWEB_CLOUD_URL}${redirectPath}?${paramString}`
 }
 
 export const handleCollaPurchaseError = (
@@ -22,7 +22,7 @@ export const handleCollaPurchaseError = (
 ) => {
   const collaModal = createCollarModal()
   if (
-    isILLAAPiError(e) &&
+    isZWEBAPiError(e) &&
     (e.data.errorFlag === ERROR_FLAG.ERROR_FLAG_INSUFFICIENT_COLLA ||
       e.data.errorFlag === ERROR_FLAG.ERROR_FLAG_INSUFFICIENT_DRIVE_VOLUME ||
       e.data.errorFlag ===
@@ -47,7 +47,7 @@ export const handleFreeTeamLimitError = (
 ) => {
   const limitTeamModal = createTeamLimitModal()
   if (
-    isILLAAPiError(e) &&
+    isZWEBAPiError(e) &&
     e.data.errorFlag === ERROR_FLAG.ERROR_FLAG_OVER_MAX_FREE_TEAM_LIMIT
   ) {
     limitTeamModal?.({

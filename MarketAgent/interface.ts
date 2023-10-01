@@ -1,4 +1,4 @@
-import { Params } from "@illa-public/record-editor"
+import { Params } from "@zweb-public/record-editor"
 import { ReactNode } from "react"
 
 export interface ContributorTeam {

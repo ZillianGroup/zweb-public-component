@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const gridFormStyle: SerializedStyles = css`
   display: grid;
@@ -23,14 +23,14 @@ export const formTitleStyle: SerializedStyles = css`
   font-size: 24px;
   line-height: 32px;
   font-weight: 500;
-  color: ${globalColor(`--${illaPrefix}-gray-02`)};
+  color: ${globalColor(`--${zwebPrefix}-gray-02`)};
 `
 
 export const formLabelStyle: SerializedStyles = css`
   font-size: 14px;
   line-height: 22px;
   font-weight: 500;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
 `
 
 export const forgotPwdStyle: SerializedStyles = css`
@@ -46,7 +46,7 @@ export const forgotPwdContainerStyle: SerializedStyles = css`
 `
 
 export const descriptionStyle: SerializedStyles = css`
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
 `
 
 export const errorMsgStyle: SerializedStyles = css`
@@ -54,7 +54,7 @@ export const errorMsgStyle: SerializedStyles = css`
   font-size: 14px;
   padding-left: 24px;
   line-height: 22px;
-  color: ${globalColor(`--${illaPrefix}-orange-03`)};
+  color: ${globalColor(`--${zwebPrefix}-orange-03`)};
 `
 
 export const errorIconStyle: SerializedStyles = css`
@@ -84,7 +84,7 @@ export const oAuthIconStyle = css`
 
 export const resetPasswordSubtitleWrapperStyle = css`
   margin-top: 8px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   font-size: 14px;
   font-weight: 400;
   line-height: normal;

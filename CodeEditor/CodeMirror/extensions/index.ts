@@ -12,7 +12,7 @@ import { bracketMatching, indentOnInput } from "@codemirror/language"
 import { Extension, Prec } from "@codemirror/state"
 import { dropCursor, keymap } from "@codemirror/view"
 import { useMemo } from "react"
-import { buildIllaContextCompletionSource } from "./completionSources/illaContext"
+import { buildZWebContextCompletionSource } from "./completionSources/zwebContext"
 import { getHighlightExpressionExtension } from "./heighLightJSExpression"
 import { ICodeMirrorOptions } from "./interface"
 
@@ -28,8 +28,8 @@ export const basicExtension: Extension = [
 const buildCompletionSources = (
   completionOptions: { key: string; value: any }[],
 ) => {
-  const illaSources = buildIllaContextCompletionSource(completionOptions)
-  const completionSources: CompletionSource[] = [illaSources]
+  const zwebSources = buildZWebContextCompletionSource(completionOptions)
+  const completionSources: CompletionSource[] = [zwebSources]
   return completionSources
 }
 const keyMapExtensions = Prec.highest(

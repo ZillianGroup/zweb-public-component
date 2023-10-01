@@ -1,14 +1,14 @@
-import { AuthShown, SHOW_RULES } from "@illa-public/auth-shown"
+import { AuthShown, SHOW_RULES } from "@zweb-public/auth-shown"
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
+  ZWEB_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
+} from "@zweb-public/mixpanel-utils"
 import {
   FREE_TEAM_LIMIT_TYPE,
   handleFreeTeamLimitError,
-} from "@illa-public/upgrade-modal"
-import { USER_ROLE, USER_STATUS, teamActions } from "@illa-public/user-data"
-import { isSmallThanTargetRole } from "@illa-public/user-role-utils"
+} from "@zweb-public/upgrade-modal"
+import { USER_ROLE, USER_STATUS, teamActions } from "@zweb-public/user-data"
+import { isSmallThanTargetRole } from "@zweb-public/user-role-utils"
 import { FC, useCallback, useContext, useEffect, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch } from "react-redux"
@@ -20,7 +20,7 @@ import {
   MoreIcon,
   useMessage,
   useModal,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import {
   fetchChangeTeamMemberRole,
   fetchRemoveTeamMember,
@@ -68,7 +68,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
       },
       onOk: async () => {
         track?.(
-          ILLA_MIXPANEL_EVENT_TYPE.CLICK,
+          ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
           {
             element: "remove_modal_remove",
           },
@@ -89,7 +89,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
       },
       onCancel: () => {
         track?.(
-          ILLA_MIXPANEL_EVENT_TYPE.CLICK,
+          ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
           {
             element: "remove_modal_cancel",
           },
@@ -98,7 +98,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
       },
     })
     track?.(
-      ILLA_MIXPANEL_EVENT_TYPE.SHOW,
+      ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
       {
         element: "remove_modal",
       },
@@ -118,7 +118,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
       },
       onOk: async () => {
         track?.(
-          ILLA_MIXPANEL_EVENT_TYPE.CLICK,
+          ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
           {
             element: "transfer_modal_transfer",
           },
@@ -148,7 +148,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
       },
       onCancel: () => {
         track?.(
-          ILLA_MIXPANEL_EVENT_TYPE.CLICK,
+          ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
           {
             element: "transfer_modal_cancel",
           },
@@ -157,7 +157,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
       },
     })
     track?.(
-      ILLA_MIXPANEL_EVENT_TYPE.SHOW,
+      ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
       {
         element: "transfer_modal",
       },
@@ -168,7 +168,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
   useEffect(() => {
     if (!disabled) {
       track?.(
-        ILLA_MIXPANEL_EVENT_TYPE.SHOW,
+        ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
         {
           element: "more_by_member",
         },
@@ -189,7 +189,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
               userStatus !== USER_STATUS.PENDING
             ) {
               track?.(
-                ILLA_MIXPANEL_EVENT_TYPE.SHOW,
+                ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
                 {
                   element: "transfer",
                 },
@@ -197,7 +197,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
               )
             }
             track?.(
-              ILLA_MIXPANEL_EVENT_TYPE.SHOW,
+              ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
               {
                 element: "remove",
               },
@@ -219,7 +219,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
                     value="trans"
                     onClick={() => {
                       track?.(
-                        ILLA_MIXPANEL_EVENT_TYPE.CLICK,
+                        ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
                         {
                           element: "transfer",
                         },
@@ -242,7 +242,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
                 value="remove"
                 onClick={() => {
                   track?.(
-                    ILLA_MIXPANEL_EVENT_TYPE.CLICK,
+                    ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
                     {
                       element: "remove",
                     },

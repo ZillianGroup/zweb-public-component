@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { getColor, globalColor, illaPrefix } from "@illa-design/react"
+import { getColor, globalColor, zwebPrefix } from "@zweb-design/react"
 
 export function applyRecordEditorContainerStyle(label: string) {
   return css`
@@ -22,10 +22,10 @@ export const recordStyle = css`
   min-height: 48px;
 
   & > button {
-    color: ${globalColor(`--${illaPrefix}-grayBlue-05`)};
+    color: ${globalColor(`--${zwebPrefix}-grayBlue-05`)};
 
     :hover {
-      color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+      color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
       transition: color 200ms ease-in-out;
     }
   }
@@ -86,7 +86,7 @@ export const recordEditorLabelStyle = css`
   align-items: end;
   font-size: 14px;
   font-weight: 500;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
 `
 
 export const subLabelStyle = css`

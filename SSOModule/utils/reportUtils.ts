@@ -1,22 +1,22 @@
 import {
-  ILLAMixpanel,
-  ILLA_MIXPANEL_EVENT_TYPE,
-  ILLA_MIXPANEL_PUBLIC_PAGE_NAME,
-  ILLA_PAGE_NAME,
-} from "@illa-public/mixpanel-utils"
+  ZWEBMixpanel,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+  ZWEB_MIXPANEL_PUBLIC_PAGE_NAME,
+  ZWEB_PAGE_NAME,
+} from "@zweb-public/mixpanel-utils"
 import { FieldErrors } from "react-hook-form"
 import { LoginFields } from "../LoginPage/interface"
 import { RegisterFields } from "../RegisterPage/interface"
 import { ResetPwdFields } from "../ResetPasswordPage/interface"
 
 export const validateReport = (
-  page: ILLA_PAGE_NAME,
+  page: ZWEB_PAGE_NAME,
   element: string,
   isValid: boolean,
   errors: FieldErrors<RegisterFields & LoginFields & ResetPwdFields>,
 ) => {
   if (isValid) {
-    ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.VALIDATE, {
+    ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.VALIDATE, {
       page,
       element,
       parameter2: "suc",
@@ -25,7 +25,7 @@ export const validateReport = (
   }
   const { email, password, nickname, verificationCode, newPassword } = errors
   const errorList = []
-  if (page === ILLA_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP) {
+  if (page === ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP) {
     if (nickname) {
       if (nickname.type === "required") {
         errorList.push("username_blank")
@@ -38,8 +38,8 @@ export const validateReport = (
   }
 
   if (
-    page === ILLA_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP ||
-    page === ILLA_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD
+    page === ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP ||
+    page === ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD
   ) {
     if (verificationCode && verificationCode.type === "required") {
       errorList.push("verification_code_blank")
@@ -64,7 +64,7 @@ export const validateReport = (
   }
 
   if (!isValid) {
-    ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.VALIDATE, {
+    ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.VALIDATE, {
       page,
       element,
       parameter2: "failed",

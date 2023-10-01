@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const applyFontWeightStyle = (fontWeight?: number) => css`
   font-weight: ${fontWeight ? fontWeight : "inherit"};
@@ -11,7 +11,7 @@ export const valueLabelStyle = css`
   align-items: center;
   font-size: 14px;
   line-height: 22px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
 `
 
 export const optionContentStyle = css`
@@ -19,7 +19,7 @@ export const optionContentStyle = css`
   padding: 8px 0;
   font-size: 14px;
   line-height: 22px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
 `
 
 export const optionItemStyle = css`
@@ -31,7 +31,7 @@ export const optionItemStyle = css`
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: ${globalColor(`--${illaPrefix}-grayBlue-09`)};
+    background-color: ${globalColor(`--${zwebPrefix}-grayBlue-09`)};
   }
 
   & > svg {

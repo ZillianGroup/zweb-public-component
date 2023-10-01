@@ -1,11 +1,11 @@
-import { TextLink } from "@illa-public/text-link"
+import { TextLink } from "@zweb-public/text-link"
 import {
   SUBSCRIBE_PLAN,
   SUBSCRIPTION_CYCLE,
   getCurrentId,
   getCurrentUserID,
-} from "@illa-public/user-data"
-import { isMobileByWindowSize, isSubscribeForDrawer } from "@illa-public/utils"
+} from "@zweb-public/user-data"
+import { isMobileByWindowSize, isSubscribeForDrawer } from "@zweb-public/utils"
 import { FC, useMemo, useState } from "react"
 import { Trans, useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
@@ -20,7 +20,7 @@ import {
   Select,
   useMessage,
   zIndex,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { cancelSubscribe, modifySubscribe, subscribe } from "../../service"
 import { LICENSE_UNIT_PRICE } from "../../service/interface"
 import { getSuccessRedirectWithParams } from "../../utils"

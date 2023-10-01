@@ -1,17 +1,17 @@
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
+  ZWEB_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
-import { USER_ROLE } from "@illa-public/user-data"
+} from "@zweb-public/mixpanel-utils"
+import { USER_ROLE } from "@zweb-public/user-data"
 import {
   ACTION_MANAGE,
   ATTRIBUTE_GROUP,
   canManage,
   isBiggerThanTargetRole,
-} from "@illa-public/user-role-utils"
+} from "@zweb-public/user-role-utils"
 import { FC, useContext, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { CloseIcon, Divider, Drawer, TriggerProvider } from "@illa-design/react"
+import { CloseIcon, Divider, Drawer, TriggerProvider } from "@zweb-design/react"
 import { AgentToMarketplaceMobile } from "../../component/AgentToMarketplace/mobile"
 import { InviteByEmailMobile } from "../../component/InviteByEmail/mobile"
 import { InviteLinkMobile } from "../../component/InviteLink/mobile"
@@ -61,7 +61,7 @@ export const ShareAgentMobile: FC<ShareAgentProps> = (props) => {
   const { track } = useContext(MixpanelTrackContext)
 
   const handleTabChange = (activeKey: string) => {
-    track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+    track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "share_modal_tab",
       parameter2: activeKey,
       parameter5: props.agentID,

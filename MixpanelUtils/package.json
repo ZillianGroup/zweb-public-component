@@ -1,12 +1,12 @@
 {
-  "name": "@illa-public/mixpanel-utils",
+  "name": "@zweb-public/mixpanel-utils",
   "version": "0.0.0",
   "private": true,
   "main": "index.tsx",
   "dependencies": {
     "@fingerprintjs/fingerprintjs": "^3.4.0",
-    "@illa-public/illa-storage": "workspace:*",
-    "@illa-public/utils": "workspace:*",
+    "@zweb-public/zweb-storage": "workspace:*",
+    "@zweb-public/utils": "workspace:*",
     "mixpanel-browser": "^2.47.0"
   },
   "devDependencies": {

@@ -1,9 +1,9 @@
 {
-  "name": "@illa-public/illa-storage",
+  "name": "@zweb-public/zweb-storage",
   "version": "0.0.1",
   "description": "",
   "main": "index.tsx",
   "keywords": [],
-  "author": "illacloud",
+  "author": "zilliangroup",
   "license": "Apache-2.0"
 }

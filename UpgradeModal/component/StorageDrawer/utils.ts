@@ -1,4 +1,4 @@
-import { isSubscribeForDrawer } from "@illa-public/utils"
+import { isSubscribeForDrawer } from "@zweb-public/utils"
 import { DriveVolumeInfo } from "../../interface"
 
 export const isQuantityDecreased = (

@@ -6,7 +6,7 @@ import {
   ButtonVariant,
   Progress,
   getColor,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import DriveIcon from "./assets/drive.svg"
 import LicenseIcon from "./assets/license.svg"
 import TrafficIcon from "./assets/traffic.svg"

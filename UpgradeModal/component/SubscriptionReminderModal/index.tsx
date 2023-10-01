@@ -1,9 +1,9 @@
-import { UpgradeIcon } from "@illa-public/icon"
+import { UpgradeIcon } from "@zweb-public/icon"
 import {
   SUBSCRIBE_PLAN,
   SUBSCRIPTION_CYCLE,
   getCurrentTeamInfo,
-} from "@illa-public/user-data"
+} from "@zweb-public/user-data"
 import { FC, useCallback, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
@@ -14,7 +14,7 @@ import {
   Link,
   Modal,
   Trigger,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { ReactComponent as TipIcon } from "./assets/pricing-tip.svg"
 import { ReactComponent as ModalDecorate } from "./assets/upgrad-modal-bg.svg"
 import {
@@ -62,7 +62,7 @@ export const SubscriptionReminderModal: FC<UpgradeModalProps> = (props) => {
 
   const billingUrl = useMemo(() => {
     if (!teamInfo?.identifier) return ""
-    return `${process.env.ILLA_CLOUD_URL}/setting/${teamInfo?.identifier}/billing`
+    return `${process.env.ZWEB_CLOUD_URL}/setting/${teamInfo?.identifier}/billing`
   }, [teamInfo?.identifier])
 
   const openDrawer = useCallback(() => {

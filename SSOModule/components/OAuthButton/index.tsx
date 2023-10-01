@@ -1,11 +1,11 @@
 import {
-  ILLAMixpanel,
-  ILLA_MIXPANEL_EVENT_TYPE,
-  ILLA_MIXPANEL_PUBLIC_PAGE_NAME,
-} from "@illa-public/mixpanel-utils"
+  ZWEBMixpanel,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+  ZWEB_MIXPANEL_PUBLIC_PAGE_NAME,
+} from "@zweb-public/mixpanel-utils"
 import { FC, useState } from "react"
 import { useSearchParams } from "react-router-dom"
-import { Button } from "@illa-design/react"
+import { Button } from "@zweb-design/react"
 import { fetchOAuthURI } from "../../LoginPage/services"
 import { OAUTH_REDIRECT_URL, openOAuthUrl } from "../../constants/users"
 import { OAuthButtonProps } from "./interface"
@@ -16,8 +16,8 @@ export const OAuthButton: FC<OAuthButtonProps> = (props) => {
   const [searchParams] = useSearchParams()
 
   const onClickButton = async () => {
-    ILLAMixpanel.track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
-      page: ILLA_MIXPANEL_PUBLIC_PAGE_NAME.LOGIN,
+    ZWEBMixpanel.track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
+      page: ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.LOGIN,
       element: `${props.type}_sign_in`,
     })
 
